@@ -1,19 +1,83 @@
+/* Global Body Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #F4E3D7! I;
+    color:black ;
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
+    background: #FAF3E0;
+    color: darkgoldenrod;
+    padding: 2rem 1.5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    overflow: hidden;
 }
 
+/* Handwriting Animation for Header Text */
+header h1 {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    position: relative;
+    animation: handwriting 6s steps(60) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Handwriting animation (revealing text) */
+@keyframes handwriting {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+header h1::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 3rem;
+    color: darkgoldenrod;
+    animation: blink 1s step-end infinite;
+}
+
+/* Blinking animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Make header text responsive */
+@media (max-width: 768px) {
+    header {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 2rem;
+    }
+}
+
+/* Product List Styles */
 #product-list {
     display: flex;
     flex-wrap: wrap;
@@ -22,12 +86,13 @@ header {
     padding: 2rem;
 }
 
+/* Product Card Styles */
 .product-card {
-    border: 1px solid #ddd;
+    border: 1px solid #D9C27D;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 70%;
-    background-color: #fff;
+    background-color: #FAF3E0;
     text-align: center;
     padding: 1rem;
     transition: transform 0.2s ease-in-out;
