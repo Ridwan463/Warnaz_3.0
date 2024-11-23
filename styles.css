@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F4E3D7! I;
-    color:black ;
+    background-color: #F4E3D7 !important;
+    color: black;
 }
 
 /* Header Styles */
@@ -117,4 +117,78 @@ header h1::after {
 .product-card p {
     font-size: 1rem;
     color: #666;
+}
+
+/* Navbar Styles */
+.navbar {
+    padding: 1rem 2rem;
+    background-color: #6E4B3A; /* Custom brown shade for navbar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Bright golden color */
+    text-transform: uppercase;
+}
+
+.navbar-brand:hover {
+    color: #F5C100; /* Slightly darker gold on hover */
+    text-decoration: none;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Highlight in golden color on hover */
+    text-decoration: underline;
+}
+
+/* Social Media Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: #FFD700;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #F5C100;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .nav-item {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem;
+    }
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}
+
+/* Custom Footer Style (if required for social media) */
+footer {
+    background-color: #6E4B3A;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
 }
